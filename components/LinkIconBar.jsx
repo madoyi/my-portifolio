@@ -1,10 +1,4 @@
-import {
-  Icon,
-  Link,
-  Stack,
-  Tooltip,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Icon, Link, Stack, Tooltip } from "@chakra-ui/react";
 import React from "react";
 import { BiLink } from "react-icons/bi";
 import { FaDev, FaLinkedin, FaYoutube } from "react-icons/fa";
@@ -43,11 +37,8 @@ const LinkIcon = ({ index, color, onHoverColor, url, label, icon }) => (
 );
 
 const LinkIconBar = ({ links, color, onHoverColor, ...props }) => {
-  const iconColor =
-    color || useColorModeValue(colors.subtle.light, colors.subtle.dark);
-  const hoverColor =
-    onHoverColor ||
-    useColorModeValue(colors.secondary.light, colors.secondary.dark);
+  const iconColor = colors.subtle.light;
+  const hoverColor = colors.secondary.light;
   return (
     <Stack
       mt={4}
@@ -61,8 +52,8 @@ const LinkIconBar = ({ links, color, onHoverColor, ...props }) => {
         <LinkIcon
           key={link.label}
           index={index}
-          color={iconColor}
-          onHoverColor={hoverColor}
+          color={color || iconColor}
+          onHoverColor={onHoverColor || hoverColor}
           {...link}
         />
       ))}

@@ -19,6 +19,7 @@ import React from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { animateScroll as scroll, Link as ScrollLink } from "react-scroll";
 import Sticky from "react-stickynode";
+import Image from "next/image";
 
 import { colors } from "../theme";
 
@@ -45,11 +46,11 @@ const Logo = () => {
   const logo = useColorModeValue("/logo.png", "/logo-dark.png");
   return (
     <Box m="2">
-      <img
-        alt=""
+      <Image
         src={logo}
-        width="60"
-        height="60"
+        alt=""
+        width={60}
+        height={60}
         onClick={scroll.scrollToTop}
       />
     </Box>
