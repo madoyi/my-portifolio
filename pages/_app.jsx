@@ -5,6 +5,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Script from "next/script";
 import React from "react";
+import Image from "next/image";
 
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
@@ -47,10 +48,12 @@ const SiteHead = ({ title }) => (
       src="https://scripts.simpleanalyticscdn.com/latest.js"
     />
     <noscript>
-      <img
+      <Image
         src="https://queue.simpleanalyticscdn.com/noscript.gif"
         alt=""
         referrerPolicy="no-referrer-when-downgrade"
+        width={1}
+        height={1}
       />
     </noscript>
   </Head>
