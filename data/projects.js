@@ -122,7 +122,7 @@ export const extraProjects = [
       {
         label: "Website",
         icon: "link",
-        url: "/",
+        url: "https://draggabletodo.netlify.app/",
       },
     ],
   },
